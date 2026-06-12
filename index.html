@@ -13,7 +13,7 @@
     <style>
       :root {
         --ink: #172033;
-        --muted: #637083;
+        --muted: #667085;
         --blue: #3f73f6;
         --blue-dark: #285bd7;
         --mint: #dff8ed;
@@ -25,40 +25,34 @@
       }
 
       * { box-sizing: border-box; }
-
       html { scroll-behavior: smooth; }
-
       body {
         margin: 0;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         color: var(--ink);
         background: var(--white);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
-
       a { color: inherit; }
-
       .wrap {
         width: min(1120px, calc(100% - 32px));
         margin: 0 auto;
       }
-
       .nav {
+        min-height: 76px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 18px;
-        padding: 20px 0;
       }
-
       .brand {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        text-decoration: none;
+        color: var(--ink);
         font-size: 20px;
         font-weight: 850;
+        text-decoration: none;
       }
-
       .mark {
         width: 36px;
         height: 36px;
@@ -69,7 +63,6 @@
         background: var(--blue);
         box-shadow: 0 10px 24px rgba(63, 115, 246, 0.22);
       }
-
       .nav-links {
         display: flex;
         align-items: center;
@@ -78,28 +71,25 @@
         font-size: 14px;
         font-weight: 750;
       }
-
       .nav-links a { text-decoration: none; }
-
       .hero {
+        min-height: calc(100vh - 76px);
         display: grid;
         grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
         align-items: center;
         gap: 48px;
-        padding: 70px 0 58px;
+        padding: 54px 0 64px;
       }
-
       .pill {
         width: fit-content;
         padding: 8px 12px;
-        border-radius: 999px;
         border: 1px solid rgba(63, 115, 246, 0.18);
+        border-radius: 999px;
         color: var(--blue-dark);
         background: #f7faff;
         font-size: 14px;
         font-weight: 800;
       }
-
       h1 {
         max-width: 760px;
         margin: 22px 0 0;
@@ -107,7 +97,6 @@
         line-height: 0.95;
         letter-spacing: 0;
       }
-
       .lead {
         max-width: 640px;
         margin: 24px 0 0;
@@ -115,7 +104,6 @@
         font-size: clamp(18px, 2vw, 22px);
         line-height: 1.55;
       }
-
       .cta-row {
         display: flex;
         flex-wrap: wrap;
@@ -123,7 +111,6 @@
         gap: 12px;
         margin-top: 30px;
       }
-
       .button {
         min-height: 52px;
         display: inline-flex;
@@ -131,34 +118,31 @@
         justify-content: center;
         gap: 10px;
         padding: 0 20px;
-        border-radius: 12px;
         border: 1px solid transparent;
+        border-radius: 12px;
         font-size: 16px;
         font-weight: 850;
         text-decoration: none;
         cursor: pointer;
       }
-
       .button.primary {
         color: white;
         background: var(--blue);
         box-shadow: 0 14px 30px rgba(63, 115, 246, 0.22);
       }
-
       .button.primary:hover { background: var(--blue-dark); }
-
       .button.secondary {
         color: var(--ink);
         background: white;
         border-color: var(--line);
       }
-
       .note {
         margin-top: 14px;
         color: var(--muted);
         font-size: 14px;
+        line-height: 1.5;
       }
-
+      .note a { color: var(--blue-dark); font-weight: 800; }
       .phone {
         width: min(390px, 100%);
         justify-self: center;
@@ -168,18 +152,15 @@
         background: white;
         box-shadow: 0 32px 80px rgba(32, 45, 73, 0.2);
       }
-
       .phone-top {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         padding-bottom: 16px;
         border-bottom: 1px solid var(--line);
       }
-
       .phone-title { font-size: 18px; font-weight: 900; }
       .phone-sub { margin-top: 3px; color: var(--muted); font-size: 14px; }
-
       .bubble {
         width: 42px;
         height: 42px;
@@ -190,7 +171,6 @@
         background: #ecf3ff;
         font-weight: 900;
       }
-
       .person {
         margin-top: 12px;
         padding: 16px;
@@ -198,26 +178,19 @@
         border-radius: 16px;
         background: white;
       }
-
-      .person strong {
-        display: block;
-        font-size: 16px;
-      }
-
+      .person strong { display: block; font-size: 16px; }
       .person span {
         display: block;
         margin-top: 5px;
         color: var(--muted);
         font-size: 14px;
       }
-
       .tags {
         display: flex;
         flex-wrap: wrap;
         gap: 6px;
         margin-top: 12px;
       }
-
       .tag {
         padding: 6px 9px;
         border-radius: 999px;
@@ -226,16 +199,13 @@
         font-size: 12px;
         font-weight: 800;
       }
-
       .section { padding: 58px 0; }
-
       .section-title {
         margin: 0;
         font-size: clamp(30px, 4vw, 46px);
         line-height: 1.05;
         letter-spacing: 0;
       }
-
       .section-lead {
         max-width: 720px;
         margin: 14px 0 0;
@@ -243,14 +213,12 @@
         font-size: 18px;
         line-height: 1.55;
       }
-
       .steps {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
         margin-top: 28px;
       }
-
       .card {
         padding: 22px;
         border: 1px solid var(--line);
@@ -258,7 +226,6 @@
         background: white;
         box-shadow: 0 16px 42px rgba(37, 70, 124, 0.06);
       }
-
       .icon {
         width: 40px;
         height: 40px;
@@ -268,22 +235,11 @@
         color: var(--ink);
         font-weight: 900;
       }
-
       .card:nth-child(1) .icon { background: var(--mint); }
       .card:nth-child(2) .icon { background: var(--yellow); }
       .card:nth-child(3) .icon { background: var(--peach); }
-
-      .card h3 {
-        margin: 16px 0 0;
-        font-size: 20px;
-      }
-
-      .card p {
-        margin: 10px 0 0;
-        color: var(--muted);
-        line-height: 1.55;
-      }
-
+      .card h3 { margin: 16px 0 0; font-size: 20px; }
+      .card p { margin: 10px 0 0; color: var(--muted); line-height: 1.55; }
       .download {
         display: grid;
         grid-template-columns: 210px minmax(0, 1fr);
@@ -295,7 +251,6 @@
         background: #fbfcff;
         box-shadow: 0 18px 48px rgba(37, 70, 124, 0.08);
       }
-
       .qr {
         width: 190px;
         height: 190px;
@@ -304,20 +259,13 @@
         border-radius: 18px;
         background: white;
       }
-
-      .qr img {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-
+      .qr img { width: 100%; height: 100%; display: block; }
       .socials {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 20px;
       }
-
       .socials a {
         padding: 10px 13px;
         border: 1px solid var(--line);
@@ -328,28 +276,24 @@
         font-weight: 800;
         text-decoration: none;
       }
-
       footer {
         padding: 26px 0 44px;
         border-top: 1px solid var(--line);
         color: var(--muted);
         font-size: 14px;
       }
-
       .footer-row {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         gap: 18px;
-        flex-wrap: wrap;
       }
-
       @media (max-width: 860px) {
         .hero, .download { grid-template-columns: 1fr; }
-        .hero { padding-top: 42px; }
+        .hero { min-height: auto; padding-top: 42px; }
         .phone { justify-self: start; }
         .steps { grid-template-columns: 1fr; }
       }
-
       @media (max-width: 540px) {
         .nav-links a:not(.keep) { display: none; }
         .button { width: 100%; }
@@ -360,7 +304,8 @@
   <body>
     <script>
       window.USECONTACTS_CONFIG = {
-        appUrl: "https://app.usecontacts.app",
+        appUrl: "https://contact-organizer-pro--pedersonhintzki.replit.app/app",
+        websiteUrl: "https://usecontacts.app",
         handle: "@getusecontacts"
       };
     </script>
@@ -372,8 +317,8 @@
       </a>
       <nav class="nav-links">
         <a href="#how">How it works</a>
-        <a href="#download">Download</a>
-        <a class="keep" data-app-link href="https://app.usecontacts.app">Open app</a>
+        <a href="#download">QR link</a>
+        <a class="keep" data-app-link href="https://contact-organizer-pro--pedersonhintzki.replit.app/app">Open app</a>
       </nav>
     </header>
 
@@ -386,10 +331,12 @@
             UseContacts keeps names, numbers, notes, birthdays, socials, groups, and follow-ups in one calm place.
           </p>
           <div class="cta-row">
-            <a class="button primary" data-app-link href="https://app.usecontacts.app">Open / Download App</a>
+            <a class="button primary" data-app-link href="https://contact-organizer-pro--pedersonhintzki.replit.app/app">Open UseContacts</a>
             <a class="button secondary" href="#download">Get the QR link</a>
           </div>
-          <p class="note">App Store and Play Store pages can come later. The web app is the first version.</p>
+          <p class="note">
+            If the app button does not open, <a data-app-link href="https://contact-organizer-pro--pedersonhintzki.replit.app/app">tap this direct app link</a>.
+          </p>
         </div>
 
         <div class="phone" aria-label="UseContacts app preview">
@@ -435,11 +382,12 @@
           </div>
           <div>
             <h2 class="section-title">Send people here first.</h2>
-            <p class="section-lead">Use this website for your QR code, social bios, and word of mouth. The button will send people to the Replit app once the app domain is connected.</p>
+            <p class="section-lead">Use this website for your QR code, social bios, and word of mouth. The main button opens the working Replit app.</p>
             <div class="cta-row">
-              <a class="button primary" data-app-link href="https://app.usecontacts.app">Open / Download App</a>
+              <a class="button primary" data-app-link href="https://contact-organizer-pro--pedersonhintzki.replit.app/app">Open UseContacts</a>
               <button class="button secondary" type="button" id="copy-link">Copy website link</button>
             </div>
+            <p class="note">Later, this can switch from the Replit URL to <strong>app.usecontacts.app</strong> after the Replit custom domain is connected.</p>
             <div class="socials" aria-label="UseContacts social links">
               <a href="https://www.instagram.com/getusecontacts/">Instagram</a>
               <a href="https://www.tiktok.com/@getusecontacts">TikTok</a>
@@ -465,7 +413,7 @@
       document.getElementById("social-handle").textContent = config.handle;
       document.getElementById("copy-link").addEventListener("click", async () => {
         try {
-          await navigator.clipboard.writeText("https://usecontacts.app");
+          await navigator.clipboard.writeText(config.websiteUrl);
           document.getElementById("copy-link").textContent = "Copied";
         } catch {
           window.location.hash = "download";
